@@ -3,8 +3,8 @@ import tweepy
 
 def get_tweet_sentiment(city):
         
-    auth = tweepy.OAuthHandler("Blank", "Blank")
-    auth.set_access_token("Blank", "Blank")
+    auth = tweepy.OAuthHandler(os.environ.get('auth_token_1'), os.environ.get('auth_token_2'))
+    auth.set_access_token(os.environ.get('auth_token_3'), os.environ.get('auth_token_4'))
 
     api = tweepy.API(auth)
     try:
