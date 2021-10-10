@@ -14,13 +14,13 @@ def send_twilio_message(username, country_code, target_number, location):
         data_dump = '\n'.join(tweets[:5])
     else:
         data_dump = '\n'.join(tweets)    
-    account_sid = 'ACd2dda6bfec745c73e72e52824b5f5a19'
-    auth_token = '07d976bcadb6dd0000dff24390bf8f7a'
+    account_sid = 'Blank'
+    auth_token = 'Blank'
     client = Client(account_sid, auth_token)
 
     message = client.messages \
         .create(
-            messaging_service_sid='MG4bbd0d80aa79771ca8041300a81f7981',
+            messaging_service_sid='Blank',
             body='Greetings {}, Location : {} \n{}'.format(username, location, data_dump),
             to=target_number
         )
